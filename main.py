@@ -82,8 +82,8 @@ def login():
     global token, user_id
     url = 'https://bitsapiforbytes.herokuapp.com/extension_login'
     body = {"user": {
-        "email": "dravener@gmail.com",
-        "password": "papaki1"
+        "email": "your account email",
+        "password": "password"
     }}
     headers = {'content-type': 'application/json'}
     req = requests.post(url, data=json.dumps(body), headers=headers)
