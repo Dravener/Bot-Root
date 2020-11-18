@@ -6,12 +6,10 @@ import os
 import random
 import time
 from time import ctime
-
 import playsound
 import requests
 import speech_recognition as sr
 from gtts import gTTS
-
 from scraper import open_chrome_and_visit_bing
 
 for filename in glob.glob("audio*"):
