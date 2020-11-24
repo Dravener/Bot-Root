@@ -1,7 +1,7 @@
 import re
 
 
-def python_format(text, tag):
+def python_format(text):
     bit_content = ''
     text_la = text.split('\n')  # split text into lines
     index = 100
