@@ -5,8 +5,8 @@ import playsound
 from gtts import gTTS
 
 
-def gueno_speak(audio_string):
-    tts = gTTS(text=audio_string, lang='en')
+def tell_me(previous_function: str, all_methods, user_input):
+    tts = gTTS(text=previous_function, lang='en')
     ran = random.randint(1, 10000000)
     audio_file = 'audio-' + str(ran) + '.mp3'
     while True:
@@ -16,5 +16,5 @@ def gueno_speak(audio_string):
         except ValueError as e:
             print(e)
     playsound.playsound(audio_file)
-    print(audio_string)
+    print(previous_function)
     os.remove(audio_file)
