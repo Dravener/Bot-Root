@@ -59,10 +59,12 @@ def login():
     user_id = infos["userId"]
 
 
+previous_function = None
 import_all_functions()
 time.sleep(1)
 # all_methods['gueno_speak']("Hello Captain")
 while 1:
     # voice_data = all_methods['record_audio'](all_methods['gueno_speak'])
+    print(previous_function)
     search = input("Enter your command: ")
-    all_methods["respond"](all_methods, search)
+    previous_function = all_methods["respond"](previous_function, all_methods, search)
